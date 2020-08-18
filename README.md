@@ -154,16 +154,8 @@ This map shows individual crime reports marked by their location.  It is zoomed 
 
  Detailed steps can be found in the practicum2_eda.ipynb notebook in this repository.
  
- ## Feature Engineering
- Feature engineering was light.  An extraneous index column was removed from the initial data set.  Categorical features were encoded using different techniques.  
- 
- Features that were poorly correlated with the target variable, "charges", were removed and saved for later model building.  
- 
- An additional feature, "weight category", based on the BMI categories was added as part of the EDA process.  The categories were used for analysis of the relationship between BMI categories and several other features, including "charges".  Visualizations of the analysis can be found in the EDA notebook.
- 
- Detailed feature engineering steps can be found in the practicum_feature_engineering_2.ipynb notebook in this repository.  
    
- ## Models: Linear Regression and Support Vector Regression (SVR)
+ ## Model 1: Support Vector Machine (SVM) Classifier
  The first attempts at model building for this project were performed using regression models from several libraries.  
  The models were:  
 * Linear regression model (scikit-learn)
