@@ -142,7 +142,7 @@ base layer with data from the crime reports overlayed.  Additional neighborhood 
 The folium library along with geopandas were used for manipulating the geodata and for creating the map objects.  The maps are available in the repo as interactive HTML pages.  
 
 #### Chloropleth Map of Crime by Neighborhood
-<img src="img/crimemap.PNG" raw=true/>
+<img src="img/chloroplethmap.PNG" raw=true/>
 
 #### Map of Crime Reports (1000 Reports)
 <img src="img/crimereportmap.PNG" raw=true/>
