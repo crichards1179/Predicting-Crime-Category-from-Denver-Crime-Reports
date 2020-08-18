@@ -1,6 +1,3 @@
-# Predicting_Crime_Category
-Practicum 2 project
-
 <img src="images/Machine-Learning2.jpg" raw=true/>
 
 # Analysis of Crime Reports in the City and County of Denver
