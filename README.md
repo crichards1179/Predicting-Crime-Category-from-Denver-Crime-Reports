@@ -17,7 +17,7 @@ The data will initially be assessed using typical EDA techniques, including time
 
 ## Data Overview
 The data for this project comes from the City and County of Denver’s official government website: https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-crime  
-
+The crime reports cover a four and a half year time span starting January 1st, 2015 and continue up to July 2020.  
 The data file on incidents of crime has 19 attributes and 371,189 observations.  
 Features include:  
 
