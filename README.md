@@ -118,18 +118,18 @@ The pattern of crime category in Five Points is similar to the larger trend city
 A time-series analysis based on the reported date of a crime was performed.  The report dates were analyzed across years, months and days with the years
 months time-frame providing a clear pattern in crime.  
 
-- add timeseries png
+<img src="img/timeseries.png" raw=true/>
 
 The plot of crime frequency by month shows a seasonal trend in the occurrence of crime. The winter months have a lower incidence of crime while the summer months show a significant rise in crime. Summer 2017 was a high-point for crime in Denver.
 
 A crime type, car thefts, was selected for further analysis.  
 The month with the most frequent car thefts was analyzed.  
--insert image
+<img src="img/cartheftmonth.png" raw=true/>
 The months of May and June are the highest in terms of car thefts. February has the lowest incidence of car thefts.
 
 The top 20 neighborhoods with the most car thefts were identified.
 
-- image
+<img src="img/carthefthood.png" raw=true/>
 The number one neighborhood for car thefts is Stapleton, followed closely by Gateway/Green Valley Ranch. The lowest occurrence of car thefts is in the Central Business District, Speer, Valverde, and North Capitl Hill neighborhoods.  
   
 ### Geographical Analysis
