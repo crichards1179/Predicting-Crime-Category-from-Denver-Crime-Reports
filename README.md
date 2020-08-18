@@ -1,4 +1,4 @@
-<img src="images/Machine-Learning2.jpg" raw=true/>
+<img src="img/crimecops.jfif" raw=true/>
 
 # Analysis of Crime Reports in the City and County of Denver
 #### Chris Richards
@@ -80,10 +80,6 @@ Neighborhood data was located online from census data and merged with the existi
 was successful the resulting dataframe was very large and, ultimately, unusable given my current processing limitations.  
   
 
-
-
-
-
 ## Exploratory Data Analysis (EDA)
 Typical EDA activities were performed including:
 * Quantitative stats
@@ -95,23 +91,24 @@ The incidence of crime, crime types, and seasonal variations of crime patterns w
 The number of crimes by police district was examined.  The plot show the districts ordered from least to most crimes.
 District 6 has the most crimes with 84,753. District 7 has the least crimes at 4,348.
 
-- insert numcrimesbydist.png
+<img src="img/number_of_crimes_by_district.png" raw=true/>
 
 The number of crimes by neighborhood's in Denver was likewise analyzed.  
 The neighborhood with the most crimes by far is Five Points with 22,663 crimes. The neighborhoods of the Central Business District, Stapleton, Capital Hill and Montbello form the next cluster of crime incidence and round out the top five neighborhoods for crime.
 
-- insert numcrimesbyhood.png  
+<img src="img/number_of_crimes_by_neighborhood.png" raw=true/>
+
 
 The frequency of crimes by type was plotted.  
 The highest category of crimes is a catch-all category, "all other crimes". Unfortunately, the Denver Police Department does not provide a breakdown of this category making it difficult to extract any meaningful information.
 
 The second and thrid highest categories are a near tie at around 51,000 incidneces are "public disorder" and "larceny", respectively. Theft from vehicles and drug and alcohol offenses round out the top five.
 
-- insert freq
+<img src="img/crime_frequency.png" raw=true/>
 
 Once the neighborhood with the most crime reports was identified the frequency of crime types in that neighborhood was examined.  
 
-- insert fivepointsfreq
+<img src="img/crime_frequency_five_points.png" raw=true/>
 
 The pattern of crime category in Five Points is similar to the larger trend city wide. "All Other Crimes" are the top category followed, in this case, by drug and alcohol crimes. This is different than the city wide trend where drug and alcohol related crimes are the fifth most frequent type.
 
