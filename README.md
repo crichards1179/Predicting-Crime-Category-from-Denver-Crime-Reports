@@ -147,7 +147,7 @@ This map shows the frequency of crimes by neighborhood since 2015.  Neighborhood
 <img src="img/chloroplethmap.PNG" raw=true/>
 
 #### Map of Crime Reports (1000 Reports)
-This map shows individual crime reports marked by their location.  It is zoomed in to an area slightly south-east of the Denver city center.  A marker has been selected to show the additional information available to a user.  
+This map shows individual crime reports marked by their location.  It is zoomed in to an area slightly south-east of the Denver city center, centered on City Hall.  A marker has been selected to show the additional information available to a user.  
 
 <img src="img/crimereportmap.PNG" raw=true/>
 
