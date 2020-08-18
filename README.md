@@ -118,12 +118,11 @@ The pattern of crime category in Five Points is similar to the larger trend city
 A time-series analysis based on the reported date of a crime was performed.  The report dates were analyzed across years, months and days with the years
 months time-frame providing a clear pattern in crime.  
 
-<img src="img/timeseries.png" raw=true/>
+<img src="img/timeseries.PNG" raw=true/>
 
 The plot of crime frequency by month shows a seasonal trend in the occurrence of crime. The winter months have a lower incidence of crime while the summer months show a significant rise in crime. Summer 2017 was a high-point for crime in Denver.
 
-A crime type, car thefts, was selected for further analysis.  
-The month with the most frequent car thefts was analyzed.  
+A crime type, car thefts, was selected for further analysis.  The month with the most frequent car thefts was analyzed.  
 
 <img src="img/cartheftmonth.png" raw=true/>
 
