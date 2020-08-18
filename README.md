@@ -16,7 +16,8 @@ Analysis of the data including EDA, cartographic visualizations and cluster anal
 The data will initially be assessed using typical EDA techniques, including time-series analysis.  The geographic features will be used to perform visualizations to better understand the data.  
 
 ## Data Overview
-The data for this project comes from the City and County of Denver’s official government website: https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-crime
+The data for this project comes from the City and County of Denver’s official government website: https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-crime  
+
 The data file on incidents of crime has 19 attributes and 371,189 observations.  
 Features include:  
 
