@@ -142,9 +142,13 @@ base layer with data from the crime reports overlayed.  Additional neighborhood 
 The folium library along with geopandas were used for manipulating the geodata and for creating the map objects.  The maps are available in the repo as interactive HTML pages.  
 
 #### Chloropleth Map of Crime by Neighborhood
+This map shows the frequency of crimes by neighborhood since 2015.  Neighborhoods with lower crime are shaded light yellow while high crime neighborhoods trend towards red.  The neighborhood of Five Points has the highest incidence of crime and is clearly visible marked in red.
+
 <img src="img/chloroplethmap.PNG" raw=true/>
 
 #### Map of Crime Reports (1000 Reports)
+This map shows individual crime reports marked by their location.  It is zoomed in to an area slightly south-east of the Denver city center.  A marker has been selected to show the additional information available to a user.  
+
 <img src="img/crimereportmap.PNG" raw=true/>
 
  Detailed steps can be found in the practicum2_eda.ipynb notebook in this repository.
