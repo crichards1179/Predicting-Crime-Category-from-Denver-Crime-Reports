@@ -80,7 +80,8 @@ reports and the traffic reports were removed, along with the two flag features.
 
 Neighborhood data was located online from census data and merged with the existing crime reports by neighborhood.  Although the aggregation of this data with the existing crime data
 was successful the resulting dataframe was very large and, ultimately, unusable given my current processing limitations.  
-  
+
+Detailed steps can be found in the practicum2_data_cleaning.ipynb notebook in this repository.
 
 ## Exploratory Data Analysis (EDA)
 Typical EDA activities were performed including:
