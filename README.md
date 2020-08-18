@@ -124,12 +124,15 @@ The plot of crime frequency by month shows a seasonal trend in the occurrence of
 
 A crime type, car thefts, was selected for further analysis.  
 The month with the most frequent car thefts was analyzed.  
+
 <img src="img/cartheftmonth.png" raw=true/>
+
 The months of May and June are the highest in terms of car thefts. February has the lowest incidence of car thefts.
 
 The top 20 neighborhoods with the most car thefts were identified.
 
 <img src="img/carthefthood.png" raw=true/>
+
 The number one neighborhood for car thefts is Stapleton, followed closely by Gateway/Green Valley Ranch. The lowest occurrence of car thefts is in the Central Business District, Speer, Valverde, and North Capitl Hill neighborhoods.  
   
 ### Geographical Analysis
