@@ -1,6 +1,7 @@
-<img src="img/crimecops.jfif" raw=true/>
-
 # Analysis of Crime Reports in the City and County of Denver
+
+<img src="img/denversky.jfif" raw=true/>
+
 #### Chris Richards
 #### Practicum 2, Summer 2020
 #### Regis University
