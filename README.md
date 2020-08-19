@@ -221,13 +221,16 @@ Detailed steps for the GridSearchCV modeling can be found in the following noteb
 
 
 ## Results
-The results for each of the models was recorded and analyzed.  
-<img src="images/model_accuracy_results.jpg" raw=true/>
-  
-The top-ranked model, XGBoost using the training data set and improved hyperparameters, logged a 99.99% accuracy score.   While this should be cause for celebration, it is very likely that this model is overfitted to the data and would perform poorly when predicting on new data.  The process of manually adjusting the hyperparameters to increase the accuracy score likely inadvertently caused the overfitting.  In particular, the depth of the tree at 13 levels is very deep, which is known to cause overfitting.  
-  
-The second highest model was found using GridsearchCV and trained on the full data set.  It scored a respectable 86.00%.  This model was fit using 10-fold cross-validation which should minimize overfitting.  This method found the best estimator needed only a three-level boosted tree in order to arrive at its predictions.  
-  
-Future enhancements to this project could include experiments with additional predictive models such as Generalized Linear Models (GLM) or random forests.  Improved accuracy of the linear regression models is likely with additional preprocessing of the data to better conform to the assumptions of linear modeling.  
+In this project Denver crime reports from January 2015 to July 2020 were analyzed and preprocessed for use in various predictive models.  The crime and census data were publicly available.  Data cleaning was extensive with many issues to resolve, such as missing values, conversion of data types and manipulation of poorly formatted neighborhood information.  Categorical data was present in large quantities and was encoded using dummy variables.  The data was intitially explored using various Exploratory Data Analysis techniques.  Time-series and geographic analysis were also performed.  Trends in crime including seasonality, frequency of crimes and areas of the most crime were discovered and visualalized.  
+
+The data was then used to train various predictive models in an effort to classify crime types.  Two classification algorithms, Support Vector Classifier and XGBoost, were utilized in the model building.  In addition, the GridSearchCV method of hyperparameter tuning and cross-validation was used in conjunction with XGBoost in an effort to optimize model performance and quality.  
+
+Results unfortunately were poor in regards to the accuracy of the models.  Due to processing constraints the neighborhood census data was removed in order to shrink the number of features the models were given.  Likewise, the number of observations was reduced by 99% in order to successfully complete the exhaustive GridSearchCV algorithm.  Further research into the GridSearchCV and XGBoost algorithms uncovered several parameters that lowered the processing burden.  
+
+The XGBoost models were configured to use all hardware resources to enhance processing.  Also, early stopping was added as a parameter in order to end model training if no further gains were found.  Lastly, XGBoost provides users the ability to shift processing to the GPU for additional processing power.  These settings were implemented for later rounds of training.
+
+Although gains in performance were seen the amount of data was still too much for the current hardware to successfully complete model building.  Many fatal errors occurred at various times, including, critical Windows OS errors, and loss of connectivity between the Jupyter Notebook environment and the local processing server.  
+
+It is difficult to draw conclusions regarding the use of machine learning models to predict types of crime due to the hardware and environment issues experienced in this project.  Training the models was very difficult due to the resource limitations of my hardware and environment.  The performance of the models would likely be increased by training on a larger dataset, however.  Furthermore, adding the features from the neighborhood census data would likely improve model accuracy.  
   
 <img src="images/Machine-Learning3.jpg" raw=true/>
