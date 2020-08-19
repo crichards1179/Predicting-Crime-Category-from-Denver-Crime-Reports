@@ -233,4 +233,4 @@ Although gains in performance were seen the amount of data was still too much fo
 
 It is difficult to draw conclusions regarding the use of machine learning models to predict types of crime due to the hardware and environment issues experienced in this project.  Training the models was very difficult due to the resource limitations of my hardware and environment.  The performance of the models would likely be increased by training on a larger dataset, however.  Furthermore, adding the features from the neighborhood census data would likely improve model accuracy.  
   
-<img src="images/Machine-Learning3.jpg" raw=true/>
+<img src="img/bot.jpg" raw=true/>
