@@ -212,6 +212,8 @@ Feature importance and the best estimator tree were plotted and analyzed.  Due t
 
 <img src="img/featureimportancegs.PNG" raw=true/>  
 
+The plot shows that the two most important features were latitude and longitude.  Police precinct and police district were the next two most important features, although considerably lower than the latitude and longitude features.  Various neighborhoods round out the remainder of the features.  
+
 Next, the graphviz library was used to plot the decision tree derived from the best estimator model.
 
 <img src="img/bestesttree.PNG" raw=true/>
