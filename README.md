@@ -72,7 +72,7 @@ order to protect the privacy rights of the victim.
 For these sexual assault reports the location data was added based on the police district in which the crime was reported.  Police district data was identified online and the address of the district's 
 main police station was used as the location of the sexual assault.  Those addresses were then converted to latitude and longitude and added to the data.
   
-Two of the features, "geo_x" and "geo_y", were deemed redundant and unnecessary as the latitude and longitude of the crime was included in the data.  Those redundant features 
+Two of the features, "geo_x" and "geo_y", were deemed unnecessary as the latitude and longitude of the reported crime was included in the data.  Those redundant features 
 were removed.  Additional features were removed as well, including the address, two report identifiers and problematic dates.  
 
 The data set also included two features, "is_traffic" and "is_crime", that served as flags to indicate whether a crime was traffic related or not.  The data was filtered to include only crime
@@ -155,12 +155,38 @@ This map shows individual crime reports marked by their location.  It is zoomed 
  Detailed steps can be found in the practicum2_eda.ipynb notebook in this repository.
  
    
- ## Model 1: Support Vector Machine (SVM) Classifier
- The first attempts at model building for this project were performed using regression models from several libraries.  
- The models were:  
-* Linear regression model (scikit-learn)
-* Polynomial Regression model using SVR (scikit-learn)
-* Linear regression model (statsmodels)
+ ## Model 1: Support Vector Machine Classifier (SVC)
+ The first model built for predicting crime categories was a Support Vector Machine using the sci-kit learn library.  The task for the SVC was to perform a multi-class classification of the data to train the model.  The Denver Police Department organizes crime reports in to 15 categories.  
+ 
+ Those categories are:
+ - Aggravated Assault
+ - Arson
+ - Auto Theft
+ - Burglary
+ - Drug / Alcohol
+ - Larceny
+ - Murder
+ - Other Crimes Against Persons
+ - Public Disorder
+ - Robbery
+ - Sexual Assault
+ - Theft from Motor Vehicle
+ - Traffic Accident
+ - White Collar Crime
+ - All Other Crimes
+ 
+ This model utilized the Radial Basis Function kernel which is widely used in classification as it is capable of extending the kernel through infinite dimensions.  Default paramters were utilized.  The model was trained using 70% of the data.  A validation set consisting of the remaining 30% was held back.  Accuracy was selected as the scoring metric.  
+ 
+ The model's accuracy was 29.43% which is very low.  
+   
+ Next, several other SVM classifiers were trained using different kernels and parameters.  The models were:
+ 
+ - An SVC using the linear kernel
+ - A LinearSVC
+ - An SVC using the RBF kernel
+ - An SVC using the Poly kernel
+ 
+ 
 
 Data used for the model building was divided with 70% used for training and the remaining 30% for testing.  The models were then fitted using the training data set and predictions made on the test data set.  Accuracy using the R<sup>2</sup> scoring metric was recorded.  
 
@@ -182,19 +208,28 @@ Data for these models followed the earlier 70/30 split of testing and training s
   
 Detailed steps can be found in the practicum_xgboost_models_1_and_2.ipynb notebook in this repository.  
 ## Models:  GridsearchCV (XGBoost)
-The third set of model building experiments utilized the GridsearchCV method.  GridsearchCV allows the user to specify a set, or "grid", of hyperparameters to use for model building.  It then iterates through each combination of the hyperparameters as it fits each model.  The models are scored using, in this project, the R<sup>2</sup> accuracy metric and the best performing set of parameters is recorded.  Furthermore, it performs cross-validation of the data as it divides it into testing and training sets.  
+The second model building approach utilized the GridsearchCV method and the XGBoost algorithim for classification.  GridsearchCV allows the user to specify a set, or "grid", of hyperparameters to use for model building.  It then exhaustively iterates through each combination of the hyperparameters as it fits each model.  The models are scored using the accuracy metric and the best performing set of parameters is recorded.  Furthermore, it performs cross-validation of the data as it divides it into testing and training sets.  
   
-Two experiments using the GridsearchCV method were performed with the XGBoost algorithm as the estimator.  The goal was to use GridsearchCV to automatically find the best parameters to use for the prediction model.  
+A 70/30 train-test split was once again used to divide the data for model building and validation.  A list of parameters was constructed and passed to the GridSearchCV algorithim to itierate across.  Cross-validation was performed with  k=5 folds.  
 
-One of the experiments was fit using the 70% training set while the other used the entire set of data.  The complete set of features was used for both models.  
+Unfortunately, the size of the data set caused critical issues with the hardware and environment used for this project.  Multiple attempts to complete model building of the GridSearchCV algorithim ended in failure with operating system errors, insufficient memory and lose of connection between the Jupyter Notebook and the local server used for processing.  
 
-The resulting best parameters and best estimator from each of the experiments was recorded.   The best estimator objects were then used to perform predictions and the accuracies were recorded.  
+A successful run was achieved using only 1% of the data and configuring the algorithm to utilize additional resources on the GPU and to allow for early-stopping of training when no gain was seen in the model.  
 
-Feature importance and the final boosted trees were again visualized.  
+This lead to poor results seen in the model's accuracy with the training and validation set.  Accuracy was 33.29% for training and 28.01% for testing.  
+
+Feature importance and the best estimator tree were plotted and analyzed.  
+Due to the number of features the top 10 most important features were plotted.  
+
+<img src="images/featureimportancegs.PNG" raw=true/>  
+
+Next the graphviz library was used to plot the decision tree derived from the best estimator model.
+
+<img src="images/bestesttree.PNG" raw=true/>
   
-Detailed steps can be found in the following notebooks in this repository:
-* practicum_gridserchcv_xgboost_models_1.ipynb
-* practicum_gridserchcv_xgboost_models_full_data.ipynb
+Detailed steps for the GridSearchCV modeling can be found in the following notebook in this repository:
+* practicum2_gridserchcv_xgboost_models_4.ipynb
+
 
 ## Results
 The results for each of the models was recorded and analyzed.  
