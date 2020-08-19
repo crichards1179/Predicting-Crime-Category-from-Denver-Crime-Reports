@@ -189,10 +189,8 @@ This map shows individual crime reports marked by their location.  It is zoomed 
  
 Data used for the model building was divided with 70% used for training and the remaining 30% for testing.  The models were then fitted using the training data set and predictions made on the test data set.  Accuracy using the R<sup>2</sup> scoring metric was recorded.  
 
-In addition, feature importance based on each model was visualized.  
-
 Detailed steps can be found in the following notebook in this repository:  
-* practicum_linear_regression_all_features_2.ipynb
+* practicum2_svm3.ipynb
 
 
 ## Model: GridsearchCV (XGBoost)
