@@ -155,7 +155,7 @@ This map shows individual crime reports marked by their location.  It is zoomed 
  Detailed steps can be found in the practicum2_eda.ipynb notebook in this repository.
  
    
- ## Model 1: Support Vector Machine Classifier (SVC)
+ ## Model: Support Vector Machine Classifier (SVC)
  The first model built for predicting crime categories was a Support Vector Machine using the sci-kit learn library.  The task for the SVC was to perform a multi-class classification of the data to train the model.  The Denver Police Department organizes crime reports in to 15 categories.  
  
  Those categories are:
@@ -187,45 +187,34 @@ This map shows individual crime reports marked by their location.  It is zoomed 
  - An SVC using the Poly kernel
  
  
-
 Data used for the model building was divided with 70% used for training and the remaining 30% for testing.  The models were then fitted using the training data set and predictions made on the test data set.  Accuracy using the R<sup>2</sup> scoring metric was recorded.  
-
-Each of the models was fit using data containing different features.  One set of data consisted of the complete feature set, another set contained only "age" and "smoker", while the third set added "bmi" to "age" and "smoker".
 
 In addition, feature importance based on each model was visualized.  
 
-Detailed steps can be found in the following notebooks in this repository:  
+Detailed steps can be found in the following notebook in this repository:  
 * practicum_linear_regression_all_features_2.ipynb
-* practicum_linear_regression_age_and_smoker_2.ipynb
-* practicum_linear_regression_age_bmi_smoker_2.ipynb
 
-## Models: XGBoost
-The extreme gradient boosting (XGBoost) algorithm was implemented for the second round of model building.  The XGBoost algorithm is capable of both classification and regression modeling.  This project implemented it as a regressor similar to the earlier linear and polynomial regression experiments.  Unlike the earlier models, XGBoost uses decision trees to arrive at predictions.  The trees are "boosted" in that the algorithm seeks to improve on earlier trees by learning from their mistakes.  
-  
-Two XGBoost models were implemented.  The first used a set of parameters of low values as a "baseline".  The second model's hyperparameters were tuned for optimizing the accuracy scoring metric.  In addition, the final boosted tree of each model was visualized.
 
-Data for these models followed the earlier 70/30 split of testing and training sets.  The complete set of features was used for both models.
-  
-Detailed steps can be found in the practicum_xgboost_models_1_and_2.ipynb notebook in this repository.  
-## Models:  GridsearchCV (XGBoost)
+## Model: GridsearchCV (XGBoost)
 The second model building approach utilized the GridsearchCV method and the XGBoost algorithim for classification.  GridsearchCV allows the user to specify a set, or "grid", of hyperparameters to use for model building.  It then exhaustively iterates through each combination of the hyperparameters as it fits each model.  The models are scored using the accuracy metric and the best performing set of parameters is recorded.  Furthermore, it performs cross-validation of the data as it divides it into testing and training sets.  
-  
+
+The XGBoost algorithm is capable of both classification and regression modeling.  This project implemented it as a regressor similar to the earlier linear and polynomial regression experiments.  Unlike the earlier models, XGBoost uses decision trees to arrive at predictions.  The trees are "boosted" in that the algorithm seeks to improve on earlier trees by learning from their mistakes.  
+
 A 70/30 train-test split was once again used to divide the data for model building and validation.  A list of parameters was constructed and passed to the GridSearchCV algorithim to itierate across.  Cross-validation was performed with  k=5 folds.  
 
 Unfortunately, the size of the data set caused critical issues with the hardware and environment used for this project.  Multiple attempts to complete model building of the GridSearchCV algorithim ended in failure with operating system errors, insufficient memory and lose of connection between the Jupyter Notebook and the local server used for processing.  
 
-A successful run was achieved using only 1% of the data and configuring the algorithm to utilize additional resources on the GPU and to allow for early-stopping of training when no gain was seen in the model.  
+A successful run was achieved using only 1% of the data and configuring the algorithm to utilize additional resources on the GPU and to allow for early-stopping of training when no gain was seen in the model.  This lead to poor results seen in the model's accuracy with the training and validation set.  
 
-This lead to poor results seen in the model's accuracy with the training and validation set.  Accuracy was 33.29% for training and 28.01% for testing.  
+Accuracy was 33.29% for training and 28.01% for testing.  
 
-Feature importance and the best estimator tree were plotted and analyzed.  
-Due to the number of features the top 10 most important features were plotted.  
+Feature importance and the best estimator tree were plotted and analyzed.  Due to the number of features the top 10 most important features were plotted.  
 
-<img src="images/featureimportancegs.PNG" raw=true/>  
+<img src="img/featureimportancegs.PNG" raw=true/>  
 
-Next the graphviz library was used to plot the decision tree derived from the best estimator model.
+Next, the graphviz library was used to plot the decision tree derived from the best estimator model.
 
-<img src="images/bestesttree.PNG" raw=true/>
+<img src="img/bestesttree.PNG" raw=true/>
   
 Detailed steps for the GridSearchCV modeling can be found in the following notebook in this repository:
 * practicum2_gridserchcv_xgboost_models_4.ipynb
