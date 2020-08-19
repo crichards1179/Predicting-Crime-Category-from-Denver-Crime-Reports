@@ -10,10 +10,10 @@
 The goal of this project was to analyze a collection of crime reports to predict the category of crime using various machine learning models.
 
 ## Data Science Task 	
-Analysis of the data including EDA, cartographic visualizations and cluster analysis of reports.  Experiments with various algorithms will be performed to determine association rules related to crime in Denver and a machine learning classification model will be developed to predict crime categories.
+Experiments with various algorithms will be performed to determine association rules related to crime in Denver and a machine learning classification model will be developed to predict crime categories.    
 
 ## Analysis
-The data will initially be assessed using typical EDA techniques, including time-series analysis.  The geographic features will be used to perform visualizations to better understand the data.  
+The crime reports will be examined using techniques of exploratory data analysis, cartographic visualizations of geographic data and time-series analysis to gain a better understanding of the dat set.  
 
 ## Data Overview
 The data for this project comes from the City and County of Denver’s official government website: https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-crime  
@@ -96,7 +96,7 @@ District 6 has the most crimes with 84,753. District 7 has the least crimes at 4
 
 <img src="img/number_of_crimes_by_district.png" raw=true/>
 
-The number of crimes by neighborhood's in Denver was likewise analyzed.  
+The number of crimes by neighborhoods in Denver was likewise analyzed.  
 The neighborhood with the most crimes by far is Five Points with 22,663 crimes. The neighborhoods of the Central Business District, Stapleton, Capital Hill and Montbello form the next cluster of crime incidence and round out the top five neighborhoods for crime.
 
 <img src="img/number_of_crimes_by_neighborhood.png" raw=true/>
@@ -105,7 +105,7 @@ The neighborhood with the most crimes by far is Five Points with 22,663 crimes. 
 The frequency of crimes by type was plotted.  
 The highest category of crimes is a catch-all category, "all other crimes". Unfortunately, the Denver Police Department does not provide a breakdown of this category making it difficult to extract any meaningful information.
 
-The second and thrid highest categories are a near tie at around 51,000 incidneces are "public disorder" and "larceny", respectively. Theft from vehicles and drug and alcohol offenses round out the top five.
+The second and thrid highest categories are a near tie at around 51,000 incidents are "public disorder" and "larceny", respectively. Theft from vehicles and drug and alcohol offenses round out the top five.
 
 <img src="img/crime_frequency.png" raw=true/>
 
@@ -198,11 +198,11 @@ Detailed steps can be found in the following notebook in this repository:
 ## Model: GridsearchCV (XGBoost)
 The second model building approach utilized the GridsearchCV method and the XGBoost algorithim for classification.  GridsearchCV allows the user to specify a set, or "grid", of hyperparameters to use for model building.  It then exhaustively iterates through each combination of the hyperparameters as it fits each model.  The models are scored using the accuracy metric and the best performing set of parameters is recorded.  Furthermore, it performs cross-validation of the data as it divides it into testing and training sets.  
 
-The XGBoost algorithm is capable of both classification and regression modeling.  This project implemented it as a regressor similar to the earlier linear and polynomial regression experiments.  Unlike the earlier models, XGBoost uses decision trees to arrive at predictions.  The trees are "boosted" in that the algorithm seeks to improve on earlier trees by learning from their mistakes.  
+The XGBoost algorithm is capable of both classification and regression modeling.  This project implemented it as a classifier.  XGBoost uses decision trees to arrive at predictions.  The trees are "boosted" in that the algorithm seeks to improve on earlier trees by learning from their mistakes.  
 
-A 70/30 train-test split was once again used to divide the data for model building and validation.  A list of parameters was constructed and passed to the GridSearchCV algorithim to itierate across.  Cross-validation was performed with  k=5 folds.  
+A 70/30 train-test split was once again used to divide the data for model building and validation.  A list of parameters was constructed and passed to the GridSearchCV algorithim to itierate across.  Cross-validation was performed with k=5 folds.  
 
-Unfortunately, the size of the data set caused critical issues with the hardware and environment used for this project.  Multiple attempts to complete model building of the GridSearchCV algorithim ended in failure with operating system errors, insufficient memory and lose of connection between the Jupyter Notebook and the local server used for processing.  
+Unfortunately, the size of the data set caused critical issues with the hardware and environment used for this project.  Multiple attempts to complete model building of the GridSearchCV algorithim ended in failure with operating system errors, insufficient memory and loss of connection between the Jupyter Notebook environment and the local server used for processing.  
 
 A successful run was achieved using only 1% of the data and configuring the algorithm to utilize additional resources on the GPU and to allow for early-stopping of training when no gain was seen in the model.  This lead to poor results seen in the model's accuracy with the training and validation set.  
 
