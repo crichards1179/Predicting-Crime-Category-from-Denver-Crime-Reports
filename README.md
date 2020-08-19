@@ -229,7 +229,7 @@ Results unfortunately were poor in regards to the accuracy of the models.  Due t
 
 The XGBoost models were configured to use all hardware resources to enhance processing.  Also, early stopping was added as a parameter in order to end model training if no further gains were found.  Lastly, XGBoost provides users the ability to shift processing to the GPU for additional processing power.  These settings were implemented for later rounds of training.
 
-Although gains in performance were seen the amount of data was still too much for the current hardware to successfully complete model building.  Many fatal errors occurred at various times, including, critical Windows OS errors, and loss of connectivity between the Jupyter Notebook environment and the local processing server.  
+Although gains in performance were seen the amount of data was still too much for the current hardware to successfully complete model building.  Many fatal errors occurred at various times, including critical Windows OS errors, and loss of connectivity between the Jupyter Notebook environment and the local processing server.  
 
 It is difficult to draw conclusions regarding the use of machine learning models to predict types of crime due to the hardware and environment issues experienced in this project.  Training the models was very difficult due to the resource limitations of my hardware and environment.  The performance of the models would likely be increased by training on a larger dataset, however.  Furthermore, adding the features from the neighborhood census data would likely improve model accuracy.  
   
