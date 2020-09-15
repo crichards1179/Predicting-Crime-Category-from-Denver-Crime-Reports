@@ -9,9 +9,6 @@
 ## Project Goal
 The goal of this project was to analyze a collection of crime reports to predict the category of crime using various machine learning models.
 
-## Data Science Task 	
-Experiments with various algorithms will be performed to determine association rules related to crime in Denver and a machine learning classification model will be developed to predict crime categories.    
-
 ## Analysis
 The crime reports will be examined using techniques of exploratory data analysis, cartographic visualizations of geographic data and time-series analysis to gain a better understanding of the dat set.  
 
